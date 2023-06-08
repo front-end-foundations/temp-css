@@ -856,21 +856,14 @@ Here is an example showing sass variables for breakpoints and more:
 Example:
 
 ```css
-$break-five: 81.25em;
-// 1300px
-$break-four: 71.25em;
-// 1140
-$break-three: 61.25em;
-// 980
-$break-two: 46.25em;
-// 760
-$break-one: 22.5em;
-// 360
+$break-five: 1300px;
+$break-four: 1140px;
+$break-three: 980px;
+$break-two: 760px;
+$break-one: 360px;
 
 $radius: 0.25rem;
-
 $fonts: "Source Sans Pro", Helvetica, Clean, sans-serif;
-
 $test: #00ff00;
 ```
 
