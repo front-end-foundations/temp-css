@@ -50,6 +50,7 @@ h3 {
 
 h2 {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 a {
@@ -225,6 +226,24 @@ footer {
   footer {
     grid-area: footer;
   }
+}
+
+.modal {
+  max-width: 600px;
+  min-width: 400px;
+  padding: 2rem;
+  border-radius: 5px;
+  min-height: 200px;
+  border: 2px solid var(--orange);
+  background: white;
+  position: fixed;
+  top: 30%;
+  left: calc(50% - 200px);
+  display: none;
+}
+
+.open {
+  display: block;
 }
 
 .quote {

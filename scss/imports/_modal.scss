@@ -1,0 +1,17 @@
+.modal {
+  max-width: 600px;
+  min-width: 400px;
+  padding: 2rem;
+  border-radius: 5px;
+  min-height: 200px;
+  border: 2px solid var(--orange);
+  background: white;
+  position: fixed;
+  top: 30%;
+  left: calc(50% - 200px);
+  display: none;
+}
+
+.open {
+  display: block;
+}
