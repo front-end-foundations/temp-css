@@ -57,4 +57,10 @@ nav {
   .nav-cookit a:hover {
     background: linear-gradient(to bottom, #344e8b 1%, #6f89c7 100%);
   }
+
+  .quote {
+    max-width: 340px;
+    height: 20px;
+    overflow: auto;
+  }
 }

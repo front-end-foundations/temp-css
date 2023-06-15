@@ -23,19 +23,34 @@ function random(array) {
 
 var recipeName = `${random(basilChefs)}'s ${random(basilTexture)} pesto`;
 
-el.innerHTML = recipeName;
+el.innerText = recipeName;
 
 // ===
 
-var modal = document.querySelector(".modal");
-// var betaButton = document.querySelector('.beta');
+var modalOuter = document.querySelector(".modal-outer");
+var modalInner = document.querySelector(".modal");
+
+var betaContent = `
+<h3>Oooops!</h3>
+<p>Wow! Nothing works!<p>
+`;
+var buttonContent = `
+<h2>Coming Soon</h2>
+<p>This feature coming soon.<p>
+<a class="closer" href="#0">✖︎</a>
+`;
 
 function showPopover(event) {
-  console.log(event.target);
-  if (!event.target.matches(".beta")) return;
-  modal.classList.toggle("open");
+  if (event.target.matches(".beta")) {
+    modalInner.innerHTML = betaContent;
+    modalOuter.classList.add("open");
+  } else if (event.target.closest("nav ul")) {
+    modalInner.innerHTML = buttonContent;
+    modalOuter.classList.add("open");
+  } else if (event.target.matches(".closer, .modal-outer")) {
+    modalOuter.classList.remove("open");
+  } else return;
   event.preventDefault();
 }
 
-// betaButton.addEventListener('click', showPopover);
 document.addEventListener("click", showPopover);
